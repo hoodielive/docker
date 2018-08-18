@@ -1,0 +1,35 @@
+Docker 
+
+Namespaces
+	- allow for privatization/isolation of application spaces 
+	- runs on top of the kernel [ docker engine ] 
+	  -> file system
+	  -> network 
+	  -> uts
+	  -> pid 
+	  -> user
+
+CGroups 
+	- control resources 
+	- resource accounting 
+
+Overlay FS 
+	- layers (copy on write)  
+	- storage drivers [ contingent upon OS you've chosen to run docker engine on ] 
+	- aufs 
+	- btrfs
+	- devicemap per
+	- vfs 
+	- zfs
+	source: docker containers and images documentation 
+
+
+Why containers?
+	- density (you can literally have 20 containers running on a system) 
+	- consistency accross your environment/infrastructure 
+	- portability 
+
+Docker Client
+	- talks to docker engine over Restful API port 2376 
+	- run, start, stop, create 
+
