@@ -219,3 +219,20 @@ redis:
 
 worker:
   image: hoodielive/vote-worker
+## Docker Orchestration (Kubernetes (google), Docker Swarm, Apache Mesos) ##
+
+Features 
+- clustering
+- scheduling 
+- scaling
+- fault tolerance 
+- load-balancing 
+- application deployments (zero down) 
+
+Orchestrators 
+- Kubernetes (google) / borg
+- Swarm (native to docker) 
+- Mesos/Marathon (apache)
+
+Key Concepts Docker Swarm
+
