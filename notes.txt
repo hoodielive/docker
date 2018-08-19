@@ -108,4 +108,48 @@ docker container stop <container id>
 
 docker container rm <container id> 
 
+### Managing Containers ### 
+docker container run -idt -P school/vote (P) - port mapping
+docker container run -idt -p 80:80 school/vote - port mapping 
+
+### Container Operations ### 
+
+docker container rename <container id/name> vote
+
+docker container top gucci 
+
+docker exec gucci ps -ef 
+
+docker container inspect gucci 
+
+	- see logpath, mount points and ip address 
+
+docker container stats 
+docker container stats --no-stream=true 
+
+impose limits
+docker container inspect | grep -i memory 
+docker container stats --no-stream=true
+
+docker update -m 400M vote 
+docker container stats --no-stream=true -> didn't work for me
+
+Launch containers with --cpu-shares 
+docker run -d --name st-01 --cpu-shares 512 gucci stress --cpus 1 
+
+### Approaches ### 
+
+Imperative -> VM Like (manual) 
+	::-> pull image ::-> run -> build <-- cp [code] ^ git
+
+1. pull image
+2. run container
+3. copy source code => FROM RUN COPY EXPOSE CMD (dockerfile) 
+4. build/compile
+5. commit
+6. push 
+
+Declarative -> Dockerfile (automated)(recommended) 
+
+	
 
