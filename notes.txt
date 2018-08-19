@@ -33,3 +33,79 @@ Docker Client
 	- talks to docker engine over Restful API port 2376 
 	- run, start, stop, create 
 
+Image Format 
+	registry.docker.io/user/ubuntu:16.04 
+	registry           user repository tag 
+
+	docker container run alpine:latest uptime 
+	- when run, will see if the image already exists locally 
+	- if not, will pull from registry 
+
+Life Cycle
+	- image pull
+	- container create
+	- container attach
+	- network connect
+	- container start
+	- container die
+	- network disconnect 
+
+docker events #monitor stuff 
+
+	- docker containers last only until the program you started (exec) it with lasts. 
+	- It will stop immediately after the program exits. 
+
+
+Interactive mode 
+	- docker container run -i -t alpine:3.4 sh 
+	-i interactive 
+	-t allocate tty 
+	sh shell
+
+List containers 
+	- docker container ps (show running containers)
+	- docker ps -l (list docker containers) 
+	- docker container ps -n 2 (show last 2)  
+	- docker ps -a (show all) 
+
+PID Namespace
+	- dockerd
+
+Network Namespace 
+	- ip a s [look] 
+	- NIC gets mapped to container 
+
+
+Namespaced|non-namespaced
+cat /etc/issue |  uname -a 
+ps aux 		   |  cat /proc/cpuinfo  
+ifconfig       | date
+hostname	   | free 
+
+
+Make container persist>$ 
+
+docker container run -idt larry/loop sh
+
+-idt detach (d) interactive (i) tty (t) 
+
+Connect to container 
+docker container exec -it <id> sh 
+
+Rename container 
+
+docker container rename <whatever> 
+
+docker pause/unpause <id> 
+
+docker log -f (tail -f) 
+
+docker system df [look at resources ] 
+
+docker system prune (will remove any unused containers) 
+
+docker container stop <container id> 
+
+docker container rm <container id> 
+
+
