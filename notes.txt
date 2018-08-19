@@ -192,4 +192,30 @@ Disabling networking
 
 docker  run -itd --network none 
 
+share with host 
 
+docker run -itd --network host 
+
+use 'overlay' (docker swarm) if you want to configure multi-network configurations
+
+## Docker Microservices ## Build Application Stacks 
+docker container run -idt --name redis redis:alpine
+
+--link 
+docker container run -idt --link redis:redis hoodielive/vote-worker:v.0.2.0 
+
+## docker-compose 
+
+vote:
+  image: hoodielive/vote
+  links: 
+    - redis:redis
+  ports:
+    - 5000:80 
+	- 2202:22
+
+redis:
+  image: redis:alpine
+
+worker:
+  image: hoodielive/vote-worker
