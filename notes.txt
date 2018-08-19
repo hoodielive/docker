@@ -142,14 +142,54 @@ docker run -d --name st-01 --cpu-shares 512 gucci stress --cpus 1
 Imperative -> VM Like (manual) 
 	::-> pull image ::-> run -> build <-- cp [code] ^ git
 
+
+Declarative -> Dockerfile (automated)(recommended) 
 1. pull image
 2. run container
 3. copy source code => FROM RUN COPY EXPOSE CMD (dockerfile) 
 4. build/compile
 5. commit
 6. push 
-
-Declarative -> Dockerfile (automated)(recommended) 
-
 	
+## Cp code to container ## 
+docker container cp . interim:/code
+
+DOCKERFILE
+FROM hoodielive/vote-worker:v0.1.0 
+
+WORKDIR /code 
+
+COPY pom.xml /code/
+COPY src/main /code/src/main 
+
+RUN mvn package 
+
+CMD java -jar target/worker-jar-with-dependencies.jar
+
+docker image build -t hoodielive/vote-worker:v0.2.0 . 
+
+## Networking ##
+
+eth0 -> veth0 -> bridge -< container 
+
+docker network ls 
+	- bridge is default
+	- host 
+	- none 
+
+3 network drivers for host 
+
+docker network inspect bridge 
+docker container exec <container id> ip addr
+
+it is possible to create another bridge | thus defining a driver with ip settings (custom) 
+
+docker network create br01 -d bridge 
+docker network inspect br01
+docker network ls 
+
+Disabling networking 
+
+docker  run -itd --network none 
+
 
