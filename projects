@@ -1,0 +1,6 @@
+
+Build Node JS web app
+Create Dockerfile 
+Build an image from dockerfile
+Run image as container 
+Connect to web app from browser
