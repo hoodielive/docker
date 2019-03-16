@@ -14,7 +14,7 @@ Node -> FROM ALPINE
 
 2. Run some commands to install additional programs: 
 Redis -> RUN apk add --update redis 
-Node -> RUN npm install  // which should fail because npm will not be found
+Node -> RUN npm install 
 
 3. Specify a command to run on container setup 
 Redis -> CMD ["redis-server"]
