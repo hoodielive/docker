@@ -4,3 +4,18 @@ Create Dockerfile
 Build an image from dockerfile
 Run image as container 
 Connect to web app from browser
+
+
+NODEJS APPS: 
+Template -> 
+1. Specify a base image 
+Redis -> FROM ALPINE 
+Node -> FROM ALPINE
+
+2. Run some commands to install additional programs: 
+Redis -> RUN apk add --update redis 
+Node -> RUN npm install 
+
+3. Specify a command to run on container setup 
+Redis -> CMD ["redis-server"]
+Node -> CMD ["npm", "start"]
