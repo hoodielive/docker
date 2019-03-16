@@ -1,6 +1,8 @@
 # Specify base image 
 FROM node:alpine
 
+WORKDIR /usr/app
+
 # Place stuff inside of the container 
 COPY ./ ./
 
