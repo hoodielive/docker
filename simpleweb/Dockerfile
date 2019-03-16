@@ -5,10 +5,11 @@ FROM node:alpine
 WORKDIR /usr/app
 
 # Place stuff inside of the container 
-COPY ./ ./
+COPY ./package.json ./
 
 # Install dependencies 
 RUN npm install 
+COPY ./ ./
 
 # Setup up default cmd 
 CMD ["npm", "start"]
