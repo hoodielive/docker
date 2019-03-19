@@ -15,3 +15,7 @@ Test -> Code pushed to Travis CI
 Prod -> Code pushed to Travis CI
      -> Tests run 
      -> Deploy to AWS Elastic Beanstalk
+
+Dockerfile 
+Dev & Prod
+
