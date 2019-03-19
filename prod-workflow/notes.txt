@@ -1,0 +1,1 @@
+Me -> feature(branch) -> pull request -> master -> TRAVIS CI -> AWS Hosting
