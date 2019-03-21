@@ -23,3 +23,5 @@ docker build -f Dockerfile.dev .
 docker run -p 3000:3000 -v /app/node_modules -v $(pwd):/app <image_id>
 -v Volume
 at some point, we may need nginx
+
+Docker attach attaches to the primary process. 
