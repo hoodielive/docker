@@ -1,0 +1,15 @@
+Scoped Locally (single host networking) 
+
+802.1d bridge host | ps-bridge 
+a.k.a virtual switch or vswitch 
+
+Kernel feature on Linux 
+- mature/stable
+- fast
+
+docker network create bridge 
+:: creates a vswitch/bridge on localhost ::
+
+Nat Driver
+
+
