@@ -1,0 +1,55 @@
+3 Pillars 
+
+CNM - GRAND/design DNA of Docker Networking 
+
+CNM -> Libnetwork -> Drivers 
+
+Whitepaper (required reading if you expect to know what's going on)
+https://github.com/docker/libnetwork/blob/master/docs/design.md
+
+Container Network Model 
+Docker origin in Docker, Inc.
+
+'vs'
+
+CNI (Container Network Interface) -> custom built for Kubernetes -> Kubernetes origin is CoreOS, Inc.
+
+CNM 
+Sandbox A.K.A namespace -> ENDPOINT -> Network 
+Contains full Network Stack (Sandbox)
+Network Interface (eth0, Endpoint) 
+Connected Endpoints (Network) 
+
+Libnetwork (goLang) 
+Central place for all Docker Networking (canonical implementation)
+X-platform Pluggable
+Written in Go/GoLang
+Real-world implementation of CNM by Docker, Inc. 
+SocketPlane
+https://github.com/docker/libnetwork
+Control plane and management plane
+
+Drivers
+Network-specific detail 
+- Overlay
+- MacVLAN
+- IPVLAN
+- Bridge 
+- Host
+- None
+
+Data Plane Management
+Local = native 
+Remote = 3rd party
+Remote drivers - Calico, Contiv, Kuryr, Weave
+Docker (Engine)
+
+CNM
+Master plan/grand design 
+
+Libnetwork 
+Defacto Implementation of the CNM
+
+Drivers 
+Network-specific details
+
