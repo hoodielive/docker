@@ -91,3 +91,8 @@ Docker Networking Concepts
 
 docker container port webhost <or name of container>
 docker container inspect --format '{{ .NetworkSettings.IPAddress }}' 
+
+CLI
+docker network ls - show networks 
+docker network inspect <> - inspect a network 
+docker network create --driver - create a network
