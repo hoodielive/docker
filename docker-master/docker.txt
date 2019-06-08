@@ -55,7 +55,13 @@ docker container stop/start
 
 docker container run --publish 3306:3306 --name db01 --env MYSQL_RANDOM_ROOT_PASSWORD=true mysql 
 
-docker inspect 
-docker container stats
+docker inspect - discern specs and configurations
+docker container stats - realtime monitoring of resources
+docker container top - realtime monitoring of resources
+
+
+Getting a shell inside of containers 
+- docker container run -it (start new container interactively) 
+- docker container exec -it (run additional command in existing container) 
 
 
