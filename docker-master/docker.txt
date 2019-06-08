@@ -111,3 +111,5 @@ docker network --help
 
 Connect a new network to a old container
 docker network connect my_app_net (old container) 
+docker network disconnect my_app_net (old container) 
+
