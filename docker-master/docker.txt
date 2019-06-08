@@ -64,4 +64,11 @@ Getting a shell inside of containers
 - docker container run -it (start new container interactively) 
 - docker container exec -it (run additional command in existing container) 
 
+docker container run -it --name ubuntu ubuntu 
+When you run a container/image like this, when you exit the process will also exit.
+To attach back to the container: 
+docker container start -ai ubuntu  || exiting will exit the process again
 
+Do you want to see the shell inside of a running container 
+docker container exec -i -t mysql bash 
+ 
