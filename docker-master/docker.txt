@@ -1,0 +1,6 @@
+Pre-
+
+docker 
+docker version 
+docker --version 
+docker info 
