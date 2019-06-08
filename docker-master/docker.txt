@@ -47,3 +47,8 @@ nginx, mysql, httpd
 --detached (-d) 
 --name
 --publish 80:80 8080:80 3306:3306 
+
+Pass envvars:
+mysql use: --environment or -e  to pass in MYSQL_RANDOM_ROOT_PASSWORD=yes 
+docker container logs 
+docker container stop/start 
