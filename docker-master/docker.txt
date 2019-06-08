@@ -32,3 +32,9 @@ What happens?
 
 - Docker containers are NOT vms. 
 - Docker is a process.
+docker container run --name mongo -d mongo 
+# ps aux | grep mongo 
+docker container stop 9ae 
+# ps aux | grep mongo
+
+- Its just a process using the same kernel as any other exec/program on your system. 
