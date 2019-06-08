@@ -38,3 +38,12 @@ docker container stop 9ae
 # ps aux | grep mongo
 
 - Its just a process using the same kernel as any other exec/program on your system. 
+
+Documentation 
+- docs.docker.com (excellent source of docker documentation)
+
+Assignment: Manage Multiple Containers 
+nginx, mysql, httpd
+--detached (-d) 
+--name
+--publish 80:80 8080:80 3306:3306 
