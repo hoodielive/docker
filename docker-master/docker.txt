@@ -98,3 +98,8 @@ docker network inspect <> - inspect a network
 docker network create --driver - create a network
 docker network connect - attach a network to a container 
 docker network disconnect - detach a network from a container
+
+Ex: 
+docker network inspect bridge 
+# this will show what networks are connected and other useful information
+
