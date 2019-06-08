@@ -52,3 +52,10 @@ Pass envvars:
 mysql use: --environment or -e  to pass in MYSQL_RANDOM_ROOT_PASSWORD=yes 
 docker container logs 
 docker container stop/start 
+
+docker container run --publish 3306:3306 --name db01 --env MYSQL_RANDOM_ROOT_PASSWORD=true mysql 
+
+docker inspect 
+docker container stats
+
+
