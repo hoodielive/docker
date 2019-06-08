@@ -116,3 +116,18 @@ docker network disconnect my_app_net (old container)
 DNS 
 --link on container run 
 
+# use network-aliases
+docker container run -d --name elas01 --network distros --net-alias search elasticsearch:2
+docker container run -d --name elas02 --network distros --net-alias search elasticsearch:2
+docker container ls
+docker pull alpine
+docker container ls
+docker container ls -a
+docker container --rm --net distros alpine nslookup search
+docker container run --rm --net distros alpine nslookup search
+docker container run --help
+docker images
+docker container ls
+
+# obtain interloper
+docker container run --rm --net distros centos curl -s search:9200
