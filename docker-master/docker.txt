@@ -103,3 +103,9 @@ Ex:
 docker network inspect bridge 
 # this will show what networks are connected and other useful information
 
+docker network create my_app_net 
+docker container run -d --name new_nginx --network my_app_net nginx 
+docker network inspect my_app_net [look in container section] 
+
+docker network --help 
+docker network connect <tab>
