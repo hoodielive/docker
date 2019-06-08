@@ -30,3 +30,5 @@ What happens?
 7. Starts container by using the CMD in the image Dockerfile. 
 
 
+- Docker containers are NOT vms. 
+- Docker is a process.
