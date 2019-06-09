@@ -5,3 +5,9 @@ Database Upgrade with Containers
 3. Check logs, stop container 
 4. Create postgres container with same named volume using 9.6.2
 5. Check logs to validata
+
+Bind Mounts 
+1. Use a Jekyll "Static Site Generator" to start a local web server 
+2. Bridge the gap between local file access and apps running in containers 
+3. Source code: bindmount-sample-1
+4. Edit files with editor on host with native tools
