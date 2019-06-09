@@ -187,3 +187,14 @@ docker volume inspect mysql-db
         "Scope": "local"
     }
 ]
+
+docker volume create --help (shows help) 
+
+Persistent Data: Bind Mounting 
+- maps a host file or directory to a container file or directory 
+- basically just two locations pointing to the same file(s)
+- Again, skips UFS and host files overwrite any in container
+- Can't use in Dockerfile, must be at container run (runtime) 
+- run -v /Users/larry/stuff:/path/container (mac|linux)
+   fuck windows but //c/Users/someloser/stuff:/path/container (windows) 
+
