@@ -169,3 +169,21 @@ docker container inspect mysql # look for volumes and mounts because it will sho
 docker volume ls
 docker volume inspect <hash from volume ls>
 
+# when you stop the containers, the volume will persist - check this by running 'docker volume ls' and follow up with 'docker volume inspect 17c75876b24b2c5e5ec0b0fbe134141a3d8d52db9a31908cf19d60ceb0669002 or whatever the hash is'. 
+
+This hash business is simply unweildy and can quickly spiral out of control. It is best to use named volumes by using the 
+'-v' parameter when running the container. 
+
+docker container run -d --name mysql -e MYSQL_ALLOW_EMPTY_PASSWORD=true -v mysql-db:/var/lib/mysql mysql
+docker volume inspect mysql-db
+[
+    {
+        "CreatedAt": "2019-06-09T11:57:23-04:00",
+        "Driver": "local",
+        "Labels": null,
+        "Mountpoint": "/var/lib/docker/volumes/mysql-db/_data",
+        "Name": "mysql-db",
+        "Options": null,
+        "Scope": "local"
+    }
+]
