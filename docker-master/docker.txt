@@ -161,3 +161,11 @@ docker image push hoodielive/ngnix-with-html:latest
 Persistent Data: Volumes 
 Volume command:
 hub.docker.com - search for mysql and click on the latest - look for Volume
+
+docker pull mysql 
+docker image inspect mysql # look for Volumes 
+docker container run -d --name mysql -e MYSQL_ALLOW_EMPTY_PASSWORD=true mysql
+docker container inspect mysql # look for volumes and mounts because it will show you where it truly lives on the host
+docker volume ls
+docker volume inspect <hash from volume ls>
+
