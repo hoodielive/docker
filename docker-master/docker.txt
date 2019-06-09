@@ -147,3 +147,17 @@ docker image tag --help
 docker image tag nginx-with-html:latest hoodielive/nginx-with-html:latest
 docker image push --help  
 docker image push hoodielive/ngnix-with-html:latest 
+
+
+# Persistent Data (ephemeral and immutable)
+- immutable infrastructure - only re-deploy containers, never change
+- This is the ideal scenario, but what about databases and unique data? 
+- Docker gives us features to ensure these "seperation of concerns" 
+- This is known as 'persistent data' 
+- 2 ways: Volumes and Bind Mounts 
+- Volumes: make special location outside of container UFS
+- Bind Mounts: link container path to host path (looks like a local file path)
+
+Persistent Data: Volumes 
+Volume command:
+hub.docker.com - search for mysql and click on the latest - look for Volume
