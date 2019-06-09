@@ -135,3 +135,10 @@ docker container run --rm --net distros centos curl -s search:9200
 # Docker Images 
 + docker pull pulls down latest build by default 
 + you can download alpine versions as well - hub.docker.com (alpine is very very small foot prints)
+
+FROM nginx:latest
+WORKDIR /usr/share/nginx/html 
+COPY index.html index.html # which copies the index.html that you constructed (1st) into the container (2nd)
+
+docker image build -t nginx-with-html .
+docker container run -p 80:80 --rm nginx-with-html
