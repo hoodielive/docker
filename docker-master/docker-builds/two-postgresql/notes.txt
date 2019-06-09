@@ -11,3 +11,6 @@ Bind Mounts
 2. Bridge the gap between local file access and apps running in containers 
 3. Source code: bindmount-sample-1
 4. Edit files with editor on host with native tools
+
+Start with:
+docker container run -p 80:4000 -v $(pwd):/site bretfisher/jekyll-serve
