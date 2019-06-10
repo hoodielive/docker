@@ -198,3 +198,14 @@ Persistent Data: Bind Mounting
 - run -v /Users/larry/stuff:/path/container (mac|linux)
    fuck windows but //c/Users/someloser/stuff:/path/container (windows) 
 
+
+Docker Compose 
+- Why: configure relationships between containers 
+- Why: save a docker container run settings in easy-to-read file
+- Why: create one-liner developer env startups
+- Comprised of 2 seperate but related things 
+1. YAML-formatted file that describes our solution options for:
+	 - containers 
+	 - networks 
+	 - volumes 
+2. A CLI tool docker-compose used for local dev/test automation with those YAML files
