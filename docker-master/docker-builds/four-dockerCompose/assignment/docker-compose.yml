@@ -16,4 +16,5 @@ services:
       - db-data:/var/lib/postgresql/data 
     environment:
       - POSTGRES_PASSWORD=foobar 
-
+volumes: 
+  drupal-modules:
