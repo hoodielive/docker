@@ -1,0 +1,15 @@
+docker-compose CLI
+
+- its a separate binary 
+- Not designed to be a production-grade tool but ideal for local dev and test 
+- Two most common commands are:
+
+# CLI most common 
+docker-compose up  # setup volumes/networks and start all containers
+docker-compose down  # stop all containers and remove cont/vol/net 
+
+If all your projects had a Dockerfile and docker-compose.yml then "new developer onboarding" would be: 
+- git clone githumb.come/<env>
+- docker compose-up
+
+
