@@ -1,0 +1,17 @@
+version: '3'
+services: 
+  drupal: 
+    image: drupal:8.7.3-fpm-alpine
+    ports: 
+      - "8080:8080"
+  db:
+    image: postgres:11.3-alpine
+    volumes: 
+      - db-data:/var/lib/postgresql/data 
+    environment:
+      - POSTGRES_USER: 'foobar' 
+      - POSTGRES_PASSWORD: 'foobar' 
+      - POSTGRES_DB: 'baz' 
+    ports: 
+      - "5432:5432"
+
