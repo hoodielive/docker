@@ -9,9 +9,9 @@ services:
     volumes: 
       - db-data:/var/lib/postgresql/data 
     environment:
-      - POSTGRES_USER: "foobar" 
+            # - POSTGRES_USER: "foobar" 
       - POSTGRES_PASSWORD: "foobar" 
-      - POSTGRES_DB: "baz" 
+        #- POSTGRES_DB: "baz" 
     ports: 
       - "5432:5432"
 
