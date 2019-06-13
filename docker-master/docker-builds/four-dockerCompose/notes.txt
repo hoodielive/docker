@@ -16,3 +16,9 @@ If all your projects had a Dockerfile and docker-compose.yml then "new developer
 - docker-compose top 
 - docker-compose ps 
 - docker-compose 
+
+Using Compose to Build 
+- Compose can also build your custom images 
+- Will build them with docker-compose up if not found in cache
+- Also rebuild with docker-compose build
+- Great for complex builds that have lots of vars or build args
