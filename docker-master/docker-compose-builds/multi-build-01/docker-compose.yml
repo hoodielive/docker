@@ -3,6 +3,8 @@ services:
   drupal:
     image: "drupalology"
     build: .
+    ports:
+      - "80:5342"
 
   db:
     image: "postgres:latest"
