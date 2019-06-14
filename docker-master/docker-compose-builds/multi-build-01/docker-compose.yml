@@ -1,13 +1,15 @@
 version: "3.7"
 services:
   drupal:
-    build: .
     image: "drupalology"
+    build: .
 
   db:
-    images: "postgres:latest"
+    image: "postgres:latest"
     volumes: 
-      - "drupal-data:/var/lib/postgres_drupal"
+      - drupal-data:/var/lib/postgres_drupal
+    environment:
+      - POSTGRES_PASSWORD=foster
 
 volumes:
   - drupal-data:
