@@ -1,4 +1,4 @@
-FROM drupal:fpm-alpine
+FROM drupal:latest
 
 RUN apt-get update -y && apt-get install git -y \
       && rm -rf /var/lib/apt/lists/*
