@@ -15,10 +15,13 @@ services:
         image: postgres:9.6
         environment:
             - POSTGRES_PASSWORD=foobar
+        volumes:
+            - drupal-db:/var/lib/postgres/db
 
 volumes:
     drupal-modules:
     drupal-profiles:
     drupal-sites:
     drupal-themes:
+    drupal-db:
     
