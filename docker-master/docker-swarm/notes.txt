@@ -1,0 +1,29 @@
+Docker Swarm - Notes 
+
+Containers Everywhere = New Problems 
+1. How do we automate container lifecycle? 
+2. How can we easily scale out/in/up/down?
+3. How can we ensure our containers are re-created if they fail?
+4. How can we replace containers without downtime (blue/green deploy)? 
+5. How can we control/track where containers get started? 
+6. How can we create cross-node virtual networks? 
+7. How can we ensure only trusted servers run our containers? 
+8. How can we store secrets, keys, passwords and get them to the right container (and only that container)?
+
+Swarm Mode: Built-in Orchestration 
+- Swarm mode is a clustering solution build inside Docker.
+- Not related to Swarm "classic" for pre-1.12 versions. 
+- Added in 1.12 (Summer 2016) via Swarmkit toolkit.
+- Enhanced in 1.13 (January 2017) via Stacks and Secrets.
+- Not enabled by default, new commands once enabled:
+   - docker swarm
+   - docker node
+   - docker service
+   - docker stack
+   - docker secret
+
+# docker swarm init 
+Workers::Raft Database 
+
+# Raft consensus group::Internal Distributed state store::Manager::Worker::GossipNetwork
+# service -> replicas -> task -> container -> available node
