@@ -38,3 +38,14 @@ Scheduler, assigns nodes to tasks.
 Dispatcher, checks in on workers.
 Worker, connects to dispatcher to check on assigned tasks. 
 Executor, executes the tasks assigned to worker node. 
+
+# Docker swarm setup and output
+~/Clones/docker/docker-master/docker-swarm (master ✔) ᐅ docker swarm init --advertise-addr=10.0.1.133
+Swarm initialized: current node (pmxu2e8sdu284m6u9lf9r0u8k) is now a manager.
+
+To add a worker to this swarm, run the following command:
+
+    docker swarm join --token SWMTKN-1-3mfgbsh0j9xe9se4xf4xeq50rwq5wrtg74k7k0s85s86lvor4s-eigr49xhoh7xl14bsfc6u46e0 10.0.1.133:2377
+
+To add a manager to this swarm, run 'docker swarm join-token manager' and follow the instructions.
+
