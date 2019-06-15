@@ -49,3 +49,13 @@ To add a worker to this swarm, run the following command:
 
 To add a manager to this swarm, run 'docker swarm join-token manager' and follow the instructions.
 
+docker swarm init: What just happened? 
+- Lots of PKI and security automation
+    - Root signing and certificate created for our swarm. 
+    - Certificate is issued for first manager node.
+    - Join tokens are created. 
+
+- Raft database created to store root CA, configs and secrets:
+    - Encrypted by default on disk (1.13+). 
+    - No need for another key/value system to hold orchestration/secrets. 
+    - Replicates logs amongst Managers via mutual TLS in "control plane". 
