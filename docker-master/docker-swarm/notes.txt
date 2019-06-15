@@ -59,3 +59,8 @@ docker swarm init: What just happened?
     - Encrypted by default on disk (1.13+). 
     - No need for another key/value system to hold orchestration/secrets. 
     - Replicates logs amongst Managers via mutual TLS in "control plane". 
+
+docker node ls 
+docker node --help
+docker swarm 
+docker service --help 
