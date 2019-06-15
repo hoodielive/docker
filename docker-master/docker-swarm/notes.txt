@@ -98,3 +98,5 @@ kt2mrdm3unzx        jolly_dirac.3       alpine:latest       docker.sari.kindess.
 docker service rm <name of service> 
 docker container ls # containers will remain for a sec but then vanish as docker service cleans them up!
 
+
+# Creating 3-Node Swarm: Host Options
