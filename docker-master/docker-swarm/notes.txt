@@ -100,3 +100,10 @@ docker container ls # containers will remain for a sec but then vanish as docker
 
 
 # Creating 3-Node Swarm: Host Options
+# install docker-machine  (must have at least 8G of RAM and virtualbox) installed
+docker-machine create node1
+docker-machine create node2
+docker-machine create node3
+
+docker-machine ls 
+docker-machine --help
