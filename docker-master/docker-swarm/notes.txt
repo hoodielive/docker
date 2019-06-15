@@ -64,3 +64,32 @@ docker node ls
 docker node --help
 docker swarm 
 docker service --help 
+docker service create alpine ping 1.1.1.1
+docker service ls
+docker service ps jolly_dirac && docker container ls 
+docker service update <service id> --replicas 3 # change the number of replicas
+
+~/Clones/docker (master ✘)✹ ᐅ docker service update jmwob6neq2qk --replicas 3
+jmwob6neq2qk
+overall progress: 3 out of 3 tasks
+1/3: running   [==================================================>]
+2/3: running   [==================================================>]
+3/3: running   [==================================================>]
+verify: Service converged
+
+docker update --help 
+docker service update --help
+docker update
+
+docker container ls # running containers now that there replicas (take note) 
+now:
+docker container rm -f service.1 
+docker service ls (2/3) # but in moments it will be 3/3 again because its going to recreate the container. 
+
+~/Clones/docker (master ✘)✹ ᐅ docker service ps jmwob6neq2qk
+ID                  NAME                IMAGE               NODE                           DESIRED STATE       CURRENT STATE                ERROR                         PORTS
+lz4xl2zyebgp        jolly_dirac.1       alpine:latest       docker.sari.kindness.com   Running             Running about a minute ago
+wru9dfpwuobe         \_ jolly_dirac.1   alpine:latest       docker.sari.kindess.com   Shutdown            Failed 2 minutes ago         "task: non-zero exit (137)"
+edjjh2iw5sdr         \_ jolly_dirac.1   alpine:latest       docker.sari.kindess.com   Shutdown            Failed 2 minutes ago         "task: non-zero exit (137)"
+nubkmdehn95a        jolly_dirac.2       alpine:latest       docker.sari.kindess.com   Running             Running 6 minutes ago
+kt2mrdm3unzx        jolly_dirac.3       alpine:latest       docker.sari.kindess.com   Running             Running 6 minutes ago
