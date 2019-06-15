@@ -93,3 +93,8 @@ wru9dfpwuobe         \_ jolly_dirac.1   alpine:latest       docker.sari.kindess.
 edjjh2iw5sdr         \_ jolly_dirac.1   alpine:latest       docker.sari.kindess.com   Shutdown            Failed 2 minutes ago         "task: non-zero exit (137)"
 nubkmdehn95a        jolly_dirac.2       alpine:latest       docker.sari.kindess.com   Running             Running 6 minutes ago
 kt2mrdm3unzx        jolly_dirac.3       alpine:latest       docker.sari.kindess.com   Running             Running 6 minutes ago
+
+# Delete service because docker service will recreate containers if you delete them: 
+docker service rm <name of service> 
+docker container ls 
+
