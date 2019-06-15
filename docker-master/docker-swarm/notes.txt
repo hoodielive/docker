@@ -96,5 +96,5 @@ kt2mrdm3unzx        jolly_dirac.3       alpine:latest       docker.sari.kindess.
 
 # Delete service because docker service will recreate containers if you delete them: 
 docker service rm <name of service> 
-docker container ls 
+docker container ls # containers will remain for a sec but then vanish as docker service cleans them up!
 
