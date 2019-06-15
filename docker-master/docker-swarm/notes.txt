@@ -26,4 +26,15 @@ Swarm Mode: Built-in Orchestration
 Workers::Raft Database 
 
 # Raft consensus group::Internal Distributed state store::Manager::Worker::GossipNetwork
-# service -> replicas -> task -> container -> available node
+# service (swarm manager) -> replicas -> task -> container -> available node
+
+Manager Node:
+docker service create 
+
+API, accepts command from client. 
+Orchestrator, reconciliation loop for service objects and creates tasks.
+Allocator, allocates ip addresses to tasks.
+Scheduler, assigns nodes to tasks.
+Dispatcher, checks in on workers.
+Worker, connects to dispatcher to check on assigned tasks. 
+Executor, executes the tasks assigned to worker node. 
