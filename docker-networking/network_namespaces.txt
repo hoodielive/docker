@@ -1,0 +1,28 @@
+Network Namespaces (7) - Chopped and Screwed
+
+Overview of Linux Namespaces
+
+- Provide(s) namespaces isolation of the system resources associated with networking:
+	- Network Device(s)
+	- IPv4 and Ipv6 protocol stacks
+	- IP routing tables
+	- Firewall Rules
+	- /proc/net directory (which is a symbolic link /proc/PID/net)
+	- The /sys/class/net directory
+	- Various Files under /proc/sys/net
+	- Port Numbers (sockets)
+	- Etc.
+
+	Network namespaces isolate the UNIX domain abstract socket namespace.
+
+- A physical network device can live in exactly one network namespace.
+
+- When a network namespace is freed (i.e., when the last process in the namespace terminates), its
+  physical network device(s) are moved back to the initial network namespace (not to the parent of the process).
+
+- A virtual network (veth(4)) device pair provides a pipe-like abstraction that can be used
+  to create a bridge to a physical network device in another namespace.
+
+- When a namespace is freed, the veth(4) device(s) that it contains are destroyed.
+
+- Use of network namespaces require a kernel that is configured with the CONFIG_NET_NS option.
