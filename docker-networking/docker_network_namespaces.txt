@@ -1,0 +1,10 @@
+docker container run --rm -it busybox
+
+# ip a s
+# Interface(s) are in their respective 'Network Namespace(s)'.
+
+Inside this container is a different Network Namespace.
+
+Default Namespace to Container Network Namespace:
+{ Home/Loopback/Wifi/Eth } <----> { Docker Bridge } <----> { Docker Bridge } ----> { Inside Container } <----> { Loopback/Server }
+
