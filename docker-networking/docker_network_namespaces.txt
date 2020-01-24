@@ -9,3 +9,4 @@ Default Namespace to Container Network Namespace:
 { Home/Loopback/Wifi/Eth } <----> { Docker Bridge } <----> { Docker Bridge } ----> { Inside Container } <----> { Loopback/Server }
 Loopback->DockerBridge->DockerBridge->Container->Loopback
 
+docker network inspect
