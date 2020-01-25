@@ -10,3 +10,4 @@ Default Namespace to Container Network Namespace:
 Loopback->DockerBridge->DockerBridge->Container->Loopback
 
 docker network inspect
+docker network ls
